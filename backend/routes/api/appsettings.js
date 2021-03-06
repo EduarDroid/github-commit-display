@@ -14,8 +14,12 @@ router.get('/test', (req, res) =>
 // @access Public
 router.get('/', (req, res) => {
   AppSetting.find()
-    .then(appsettings => res.json(appsettings))
+    .then(appsettings => 
+      {
+        res.json(appsettings);
+      })
     .catch(err => res.status(404).json({ nosettingsfound: 'No settings found' }));
 });
+
 
 module.exports = router;

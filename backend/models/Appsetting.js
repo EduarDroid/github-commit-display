@@ -1,11 +1,9 @@
 const mongoose = require('mongoose');
 
-const AppsettingSchema = new mongoose.Schema({
+const schema = new mongoose.Schema({
   auth: {
-    type: String,
-    required: true
+    type: String
   }
-
 });
 
-module.exports = AppSetting = mongoose.model('GeneralParameters', AppsettingSchema);
+module.exports = AppSetting = mongoose.model('generalparameter', schema);
